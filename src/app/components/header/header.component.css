@@ -1,0 +1,11 @@
+.nav-bar {
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0 0 8px 5px #eee;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.nav-center {
+    padding: 10px;
+    text-align: center
+}

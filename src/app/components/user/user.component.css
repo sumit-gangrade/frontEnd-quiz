@@ -1,0 +1,26 @@
+.content {
+    /* border: 1px dashed crimson; */
+}
+
+.content-main {
+    display: inline-block;
+    width: 100%;
+    /* border: 1px dashed darkgreen; */
+}
+
+.box-container {
+    margin: 10px 5px;
+    float: left;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 5px 3px #eee;
+    border: 1px solid #e8e8e8;
+    border-bottom: 1px solid #aaa;
+}
+
+.user-name {
+    font-size: 20px;
+    text-align: center;
+    margin: 50px 5px;
+    /* border: 1px dashed #ff0000; */
+}

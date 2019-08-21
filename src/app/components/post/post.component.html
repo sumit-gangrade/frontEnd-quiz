@@ -1,0 +1,49 @@
+<app-header [title]="title"></app-header>
+<div class="container">
+  <div class="content-menu">
+    <div class="form-field">
+      <div class="create-post">
+        <div class="form-model">
+          <form [formGroup]="postForm">
+            <div class="title-set">
+              <label><b>Title:</b></label>
+              <input type="text" formControlName="title" required> 
+            </div>
+            <span class="message-set">
+                <label><b>Message:</b></label>
+              <textarea formControlName="body" required></textarea>
+              <input type="hidden" formControlName="userId">
+            </span>
+            <div class="menu-bar">
+              <div class="menu">
+                <input type="submit" (click)="addNewPost()" *ngIf="!editMode" [disabled]="postForm.invalid" value="Post">
+                <input type="submit" (click)="updatePost()"*ngIf="editMode" [disabled]="postForm.invalid" value="Update">
+                <input type="reset" value="Reset" (click)="resetForm()">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="content-block" *ngFor="let post of posts">
+      <div class="view-post">
+        <span class="shortcut">
+          <span class="edit anchor-tag">
+            <a (click)="editPost(post.id)">Edit</a>
+          </span>
+          <span class="delete anchor-tag">
+            <a (click)="deletePost(post.id)">Delete</a>
+          </span>
+        </span>
+        <div class="title">
+          <b>Title {{post.id}}: </b>
+          <span>{{post.title}}</span>
+        </div>
+        <div class="body">
+          <b>Message: </b>
+          <span>{{post.body}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

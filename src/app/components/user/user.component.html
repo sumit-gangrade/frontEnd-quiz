@@ -1,0 +1,12 @@
+<app-header [title]="title"></app-header>
+<div class="content">
+  <div class="container">
+    <div class="content-main">
+      <div class="box-container anchor-tag" *ngFor="let user of users" (click)="viewPost(user.id)">
+        <div class="user-name">
+          {{user.name}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
